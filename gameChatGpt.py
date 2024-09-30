@@ -36,7 +36,7 @@ def get_model_response(prompt):
         print(f"Error generating response: {e}")
         return "Error generating response."
 
-# 질문 프롬포트(llm모델에 역활전달)
+# 질문 프롬포트(모델에 역활전달)
 def generate_question_prompt(previous_questions):
     return (
         f"You are an AI playing the '20 Questions' game. Your goal is to ask yes/no questions to guess the keyword.\n"
@@ -48,13 +48,13 @@ def generate_question_prompt(previous_questions):
         f"New question:"
     )
 
-# 대답 프롬포트(llm모델에 역활전달)
+# 대답 프롬포트(모델에 역활전달)
 def generate_answer_prompt(question, keyword):
     return (
         f"The secret keyword is: '{keyword}'. Based on this, answer the question: '{question}' with 'yes' or 'no'.\nAnswer:"
     )
 
-# 추측(정답) 프롬포트(llm모델에 역활전달)
+# 추측(정답) 프롬포트(모델에 역활전달)
 def final_guess_prompt(previous_questions):
     return (
         f"You have asked the following questions:\n"
